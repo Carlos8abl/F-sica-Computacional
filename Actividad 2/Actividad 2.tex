@@ -383,7 +383,7 @@
 \section{Actividad 2}\label{actividad-2}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{3}{\boxspacing}
+\prompt{In}{incolor}{ }{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
 \end{Verbatim}
@@ -523,7 +523,7 @@ Volumen = 381703.51
 \section{Ejercicio 2}\label{ejercicio-2}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{5}{\boxspacing}
+\prompt{In}{incolor}{10}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Introduzca los coeficientes de la ecuación cuadrática}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{end}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
 \PY{n}{a}\PY{o}{=}\PY{n+nb}{float}\PY{p}{(}\PY{n+nb}{input}\PY{p}{(}\PY{p}{)}\PY{p}{)}
@@ -534,13 +534,26 @@ Volumen = 381703.51
 
 \PY{k}{if} \PY{n}{d} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{l+m+mi}{0}\PY{p}{:}
     
-    \PY{n}{X}\PY{o}{=}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{b}\PY{o}{+}\PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{d}\PY{p}{)}\PY{p}{)}\PY{o}{/}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{a}
+    \PY{n}{X}\PY{o}{=}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{b}\PY{o}{+}\PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{d}\PY{p}{)}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{a}\PY{p}{)}
 
-    \PY{n}{Y}\PY{o}{=}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{b}\PY{o}{\PYZhy{}}\PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{d}\PY{p}{)}\PY{p}{)}\PY{o}{/}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{a}
+    \PY{n}{Y}\PY{o}{=}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{b}\PY{o}{\PYZhy{}}\PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{d}\PY{p}{)}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{a}\PY{p}{)}
     \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{Raices = }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{X} \PY{p}{,} \PY{n}{Y}\PY{p}{)}
     
     \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{Raíz 1 = }\PY{l+s+si}{\PYZob{}:.4f\PYZcb{}}\PY{l+s+s2}{\PYZdq{}} \PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{X}\PY{p}{)}\PY{p}{)}
     \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{Raíz 2 = }\PY{l+s+si}{\PYZob{}:.4f\PYZcb{}}\PY{l+s+s2}{\PYZdq{}} \PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{Y}\PY{p}{)}\PY{p}{)}
+    
+\PY{k}{elif} \PY{n}{d}\PY{o}{==}\PY{l+m+mi}{0}\PY{p}{:}
+    
+    \PY{n}{X}\PY{o}{=}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{b}\PY{o}{+}\PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{d}\PY{p}{)}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{a}\PY{p}{)}
+    
+    \PY{n}{Y}\PY{o}{=}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{b}\PY{o}{+}\PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{d}\PY{p}{)}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{a}\PY{p}{)}
+    
+    \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{Raices =}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{X} \PY{p}{,} \PY{n}{Y}\PY{p}{)}
+    
+    \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{Raíz 1 = }\PY{l+s+si}{\PYZob{}:.4f\PYZcb{}}\PY{l+s+s2}{\PYZdq{}} \PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{X}\PY{p}{)}\PY{p}{)}
+    
+    \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{Raíz 2 = }\PY{l+s+si}{\PYZob{}:.4f\PYZcb{}}\PY{l+s+s2}{\PYZdq{}} \PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{Y}\PY{p}{)}\PY{p}{)}
+    
 
 \PY{k}{else}\PY{p}{:}
     \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Las raices de esta ecuación son de números complejos}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
@@ -549,22 +562,22 @@ Volumen = 381703.51
 \end{tcolorbox}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-Introduzca los coeficientes de la ecuación cuadrática1
-8
-10
+Introduzca los coeficientes de la ecuación cuadrática4
+-3
+0
 
-Raices =  -1.5505102572168221 -6.449489742783178
+Raices =  0.75 0.0
 
-Raíz 1 = -1.5505
+Raíz 1 = 0.7500
 
-Raíz 2 = -6.4495
+Raíz 2 = 0.0000
     \end{Verbatim}
 
     \hypertarget{ejercicio-3}{%
 \section{Ejercicio 3}\label{ejercicio-3}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{18}{\boxspacing}
+\prompt{In}{incolor}{24}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Introduzca el número del que desea saber su raíz cuadráda}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{end}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZdq{}} \PY{p}{)}
 
@@ -603,21 +616,22 @@ Raíz 2 = -6.4495
 \end{tcolorbox}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-Introduzca el número del que desea saber su raíz cuadráda100
-La raíz por el método tradicional es: 10.0
-Introduzca un número arbitrario lo más cercano a 10.0
-9
-Ciclo 1 : 177.163822366928
-Ciclo 2 : 88.86413584610672
-Ciclo 3 : 44.99472460703428
-Ciclo 4 : 23.608603686516584
-Ciclo 5 : 13.922173813321315
-Ciclo 6 : 10.552480080631659
-Ciclo 7 : 10.014462677833194
-El valor obtenido para la raiz de 100.0 por el método de Herón es:
-10.000010443348627
-Raíz por el método tradicional: 10.0
-Raíz por el método de Herón: 10.000010443348627
+Introduzca el número del que desea saber su raíz cuadráda1948
+La raíz por el método tradicional es: 44.13615298142782
+Introduzca un número arbitrario lo más cercano a 44.13615298142782
+40
+Ciclo 1 : 971.3387647216564
+Ciclo 2 : 486.67212212101794
+Ciclo 3 : 245.3374084887428
+Ciclo 4 : 126.63874699488285
+Ciclo 5 : 71.01054245728083
+Ciclo 6 : 49.221544422665765
+Ciclo 7 : 44.39885508082301
+Ciclo 8 : 44.13693016805686
+El valor obtenido para la raiz de 1948.0 por el método de Herón es:
+44.13615298827038
+Raíz por el método tradicional: 44.13615298142782
+Raíz por el método de Herón: 44.13615298827038
     \end{Verbatim}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
